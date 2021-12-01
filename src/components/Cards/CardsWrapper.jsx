@@ -1,8 +1,8 @@
-import { Grid } from '@mui/material'
 import React from 'react'
+import { Grid } from '@mui/material'
 import { useSelector } from 'react-redux'
-import useStyles from '../../useStyles'
 import Cards from './Cards'
+import useStyles from '../../useStyles'
 
 const CardsWrapper = () => {
     const articles = useSelector(state => state.filteredArticles)

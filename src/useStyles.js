@@ -1,6 +1,9 @@
 import { makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles({
+    cardGrid: {
+        width: '100%'
+    },
     card: {
         height: '100%',
         display: 'flex',
@@ -53,7 +56,7 @@ const useStyles = makeStyles(() => ({
         marginBottom: '10px'
     },
     searchFieldWrapper: {
-        marginBottom: '40px' 
+        marginBottom: '40px'
     },
     searchFieldLine: {
         width: '100%',
@@ -91,7 +94,7 @@ const useStyles = makeStyles(() => ({
         lineHeight: '150%',
         color: '#000000',
         paddingBottom: '50px'
-        
+
     },
     fullArticleTitle: {
         padding: '30px 5px',
@@ -101,7 +104,7 @@ const useStyles = makeStyles(() => ({
         fontSize: '24px',
         lineHeight: '29px',
         color: '#363636'
-        
+
     },
     fullArticleWrapper: {
         position: 'absolute',
@@ -134,12 +137,11 @@ const useStyles = makeStyles(() => ({
         color: '#363636',
         textDecoration: 'none',
         padding: '0 6px',
-        
+
     },
     highlighted: {
         backgroundColor: 'yellow'
     }
 })
-)
 
 export default useStyles;

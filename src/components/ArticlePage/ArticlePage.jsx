@@ -1,8 +1,8 @@
 import React from 'react'
 import { Typography, Button, Paper } from '@material-ui/core';
-import useStyles from '../../useStyles';
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as Arrow } from '../../assets/ArrowLeft.svg'
+import useStyles from '../../useStyles';
 
 const ArticlePage = ({ fullArticle }) => {
     const classes = useStyles();

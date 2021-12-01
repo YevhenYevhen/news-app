@@ -1,13 +1,13 @@
-import React, { useEffect }  from 'react'
+import React, { useEffect } from 'react'
 import { Typography, Card, Button, Grid, CardMedia, CardActions, CardContent } from '@material-ui/core';
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
-import useStyles from '../../useStyles';
 import Highlighter from "react-highlight-words";
 import { NavLink } from 'react-router-dom';
 import { setFullArticle } from '../../store/articlesReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import { ReactComponent as Arrow } from '../../assets/ArrowRight.svg'
 import { handleScrollPosition } from '../../utilities/handleScrollPosition';
+import useStyles from '../../useStyles';
 
 const Cards = ({ article, date, description, title }) => {
     const query = useSelector(state => state.query)
@@ -23,7 +23,7 @@ const Cards = ({ article, date, description, title }) => {
     }, [])
     
     return (
-        <Grid item xs={12} sm={6} md={4} >
+        <Grid item xs={12} sm={6} md={4} className={classes.cardGrid} >
             <Card className={classes.card}>
                 <CardMedia className={classes.cardMedia} image={article.imageUrl} title='Image Title' />
                 <CardContent className={classes.cardContent}>
