@@ -1,15 +1,4 @@
-.app{
-    margin: 75px 50px;
+html, #root, .app{
     background-color: white;
 }
 
-html, #root{
-    background-color: white;
-}
-
-@media (max-width: 475px) {
-    .app{
-        margin: 50px 10px;
-    }
-    
-}

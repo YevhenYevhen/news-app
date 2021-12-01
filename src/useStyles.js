@@ -19,12 +19,29 @@ const useStyles = makeStyles(() => ({
     cardTitle: {
         textAlign: 'left',
         fontFamily: 'Montserrat, sans-serif',
-        fonStyle: 'normal',
+        fontStyle: 'normal',
         fontWeight: 'normal',
-        fonSize: '24px',
+        fontSize: '24px',
         lineHeight: '29px',
         color: '#363636',
         flexGrow: 1,
+    },
+    cardDate: {
+        display: 'flex',
+        justifyContent: 'left',
+        lineHeight: 1.5,
+        fontSize: 'medium',
+        color: 'rgb(189, 189, 189)',
+    },
+    cardDescription: {
+        fontFamily: 'Montserrat, sans-serif',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: '16px',
+        lineHeight: '150%',
+        flexGrow: 1,
+        maxHeight: '96px',
+        overflow: 'hidden'
     },
     searchFieldTitle: {
         fontFamily: 'Montserrat, sans-serif',
@@ -35,88 +52,15 @@ const useStyles = makeStyles(() => ({
         color: '#363636',
         marginBottom: '10px'
     },
-    resultsCount: {
-        fontFamily: 'Montserrat, sans-serif',
-        fonStyle: 'normal',
-        fontWeight: '600',
-        fonSize: '16px',
-        lineHeight: '20px',
-        color: '#363636',
-    },
-    cardDate: {
-        display: 'flex',
-        justifyContent: 'left',
-        lineHeight: 1.5,
-        fontSize: 'medium',
-        color: 'rgb(189, 189, 189)',
-    },
-    paper: {
-        margin: 'auto',
-        marginTop: '-90px',
-        maxWidth: '1290px',
-        minHeight: '1001px',
-        padding: '20px',
-    },
-    summary: {
-        margin: '5% 10%',
-        
-    },
-    description: {
-        fontFamily: 'Montserrat, sans-serif',
-        fonStyle: 'normal',
-        fontWeight: 'normal',
-        fonSize: '16px',
-        lineHeight: '150%',
-        flexGrow: 1,
-        maxHeight: '96px',
-        overflow: 'hidden'
-    },
-    fullArticleTitle: {
-        padding: '30px 0'
-    },
-    fullScreen: {
-        position: 'absolute',
-        minHeight: '1186px'
-    },
-    backButton: {
-        marginTop: '5%',
-        marginLeft: '10%', 
-        marginBottom: '38px',
-        fontFamily: 'Montserrat, sans-serif',
-        fonStyle: 'normal',
-        fontWeight: 'bold',
-        fonSize: '16px',
-    },
-    readMoreButton: {
-        fontFamily: 'Montserrat, sans-serif',
-        fonStyle: 'normal',
-        fontWeight: 'bold',
-        fonSize: '16px',
-    },
-    buttonLink: {
-        color: '#363636',
-        textDecoration: 'none'
-    },
-    fullScreenHeader: {
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        width: '100vw',
-        height: '245px',
-        marginLeft: '-50px',
-        marginTop: '-75px'
-    },
-    highlighted: {
-        backgroundColor: 'yellow'
-    },
-    searchField: {
+    searchFieldWrapper: {
         marginBottom: '40px' 
     },
-    line: {
+    searchFieldLine: {
         width: '100%',
         border: '1px solid #EAEAEA',
         marginBottom: '45px'
     },
-    searchInput: {
+    searchFieldInput: {
         maxWidth: '600px',
         margin: '25px',
         background: '#FFFFFF',
@@ -124,6 +68,76 @@ const useStyles = makeStyles(() => ({
         boxSizing: 'border-box',
         boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.05)',
         bordeRadius: '5px'
+    },
+    resultsCount: {
+        fontFamily: 'Montserrat, sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '600',
+        fontSize: '16px',
+        lineHeight: '20px',
+        color: '#363636',
+    },
+    fullArticlePaper: {
+        margin: '-90px 8% 50px',
+        maxWidth: '1290px',
+        minHeight: '1001px'
+    },
+    fullArticleSummary: {
+        margin: '5% 10%',
+        fontFamily: 'Montserrat, sans-serif',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: '18px',
+        lineHeight: '150%',
+        color: '#000000',
+        paddingBottom: '50px'
+        
+    },
+    fullArticleTitle: {
+        padding: '30px 5px',
+        fontFamily: 'Montserrat, sans-serif',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: '24px',
+        lineHeight: '29px',
+        color: '#363636'
+        
+    },
+    fullArticleWrapper: {
+        position: 'absolute',
+        minHeight: '1186px',
+    },
+    fullArticleHeader: {
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '100vw',
+        height: '245px',
+    },
+    backButton: {
+        position: 'relative',
+        marginTop: '35px',
+        left: '10%',
+        bottom: '45px',
+        fontFamily: 'Montserrat, sans-serif',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: '16px',
+    },
+    readMoreButton: {
+        fontFamily: 'Montserrat, sans-serif',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: '16px',
+        marginLeft: '-19px'
+    },
+    buttonLink: {
+        color: '#363636',
+        textDecoration: 'none',
+        padding: '0 6px',
+        
+    },
+    highlighted: {
+        backgroundColor: 'yellow'
     }
 })
 )

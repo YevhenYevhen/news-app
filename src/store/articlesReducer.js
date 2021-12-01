@@ -30,5 +30,4 @@ export const setFullArticle = (fullArticle) => ({ type: SET_FULL_ARTICLE, fullAr
 export const setQuery = (query) => ({ type: SET_QUERY, query })
 
 
-
 export default reducer;

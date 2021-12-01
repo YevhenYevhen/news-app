@@ -3,5 +3,6 @@ export const filterArrayBy = (arr, field, queryArr) => {
         for (let i = 0; i < queryArr.length; i++) {
             return item[field].toLowerCase().includes(queryArr[i])
         }
+        return false
     })
 }

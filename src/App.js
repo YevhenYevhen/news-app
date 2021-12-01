@@ -1,14 +1,13 @@
 import { CssBaseline } from '@material-ui/core';
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Route } from 'react-router';
 import { Routes } from 'react-router-dom';
-import ArticlePage from './components/ArticlePage';
 import HomePage from './components/HomePage';
 import { setArticles, setFilteredArticles } from './store/articlesReducer';
 import './App.css'
 import { getArticles } from './api';
-
+import ArticlePageWrapper from './components/ArticlePage/ArticlePageWrapper';
 
 function App() {
   const dispatch = useDispatch()
@@ -20,13 +19,13 @@ function App() {
     }
     wrapper();
   }, [])
-
   return (
     <div className='app'>
       <CssBaseline />
       <Routes>
+        <Route exact path='/' element={<HomePage />} />
         <Route path='/homepage' element={<HomePage />} />
-        <Route path='/article/:id' element={<ArticlePage />} />
+        <Route path='/article/:id' element={<ArticlePageWrapper />} />
       </Routes>
     </div>
   );

@@ -6,7 +6,7 @@ import useStyles from '../../useStyles'
 const FilterInput = ({handleQueryChange, query}) => {
     const classes = useStyles()
     return (
-        <div className={classes.searchField}>
+        <div className={classes.searchFieldWrapper}>
             <h2 className={classes.searchFieldTitle} variant='h5'>Filter by keywords</h2>
             <TextField
                 onChange={(e) => handleQueryChange(e)}
@@ -15,7 +15,7 @@ const FilterInput = ({handleQueryChange, query}) => {
                 fullWidth
                 margin='dense'
                 variant='outlined'
-                className={classes.searchInput}
+                className={classes.searchFieldInput}
                 InputProps={{
                     startAdornment: (
                         <InputAdornment position="start">

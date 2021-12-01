@@ -1,26 +1,19 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Typography, Button, Paper } from '@material-ui/core';
-import useStyles from '../useStyles';
-import { useSelector } from 'react-redux';
+import useStyles from '../../useStyles';
 import { NavLink } from 'react-router-dom';
-import { ReactComponent as Arrow } from '../assets/ArrowLeft.svg'
+import { ReactComponent as Arrow } from '../../assets/ArrowLeft.svg'
 
-const ArticlePage = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+const ArticlePage = ({ fullArticle }) => {
     const classes = useStyles();
-    const fullArticle = useSelector(state => state.fullArticle)
-
     return (
-        <div className={classes.fullSreen}>
-            <header className={classes.fullScreenHeader} style={{ backgroundImage: `url(${fullArticle.imageUrl})` }}>
-            </header>
-            <Paper className={classes.paper} elevation={3}>
+        <div className={classes.fullArticleWrapper}>
+            <header className={classes.fullArticleHeader} style={{ backgroundImage: `url(${fullArticle.imageUrl})` }}></header>
+            <Paper className={classes.fullArticlePaper} elevation={3}>
                 <Typography variant='h5' align='center' gutterBottom className={classes.fullArticleTitle}>
                     {fullArticle.title}
                 </Typography>
-                <Typography component='div' gutterBottom variant='body1' className={classes.summary}>
+                <Typography component='div' gutterBottom variant='body1' className={classes.fullArticleSummary}>
                     <p>{fullArticle.summary}</p>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam numquam exercitationem deleniti a est unde cupiditate vel atque consectetur, dolor neque accusantium voluptatem optio sapiente delectus, et nulla iure excepturi.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium animi praesentium suscipit dignissimos! Voluptate architecto voluptates, ipsum incidunt velit id voluptatem at quisquam placeat repellendus, harum dolorem quaerat nulla magni!
@@ -39,7 +32,7 @@ const ArticlePage = () => {
                 </Typography>
             </Paper>
             <Button className={classes.backButton}>
-                <Arrow styles={{ padding: '100px' }} />
+                <Arrow />
                 <NavLink className={classes.buttonLink} to='/homepage'>Back to homepage</NavLink>
             </Button>
         </div>

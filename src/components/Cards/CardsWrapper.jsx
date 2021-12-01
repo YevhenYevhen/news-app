@@ -6,11 +6,12 @@ import Cards from './Cards'
 
 const CardsWrapper = () => {
     const articles = useSelector(state => state.filteredArticles)
+    const isFiltered = useSelector(state => !!state.query.length)
     const classes = useStyles()
     return (
         <>
-            <h2  className={classes.resultsCount} >Results: {articles.length}</h2>
-            <div className={classes.line}></div>
+            {isFiltered && <h2 className={classes.resultsCount} >Results: {articles.length}</h2>}
+            <div className={classes.searchFieldLine}></div>
             <Grid container spacing={2}>
                 {articles.map(article => {
                     let date = new Date(article.publishedAt).toDateString().substring(4).split('')
@@ -22,7 +23,7 @@ const CardsWrapper = () => {
                         article={article}
                         title={title}
                         description={description}
-                        date={date}/>
+                        date={date} />
                 })}
             </Grid>
         </>

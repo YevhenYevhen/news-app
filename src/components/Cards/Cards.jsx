@@ -23,7 +23,7 @@ const Cards = ({ article, date, description, title }) => {
     }, [])
     
     return (
-        <Grid item xs={12} sm={6} md={4} className={classes.cardGrid}>
+        <Grid item xs={12} sm={6} md={4} >
             <Card className={classes.card}>
                 <CardMedia className={classes.cardMedia} image={article.imageUrl} title='Image Title' />
                 <CardContent className={classes.cardContent}>
@@ -32,14 +32,16 @@ const Cards = ({ article, date, description, title }) => {
                         {date}
                     </Typography>
                     <Typography className={classes.cardTitle} gutterBottom variant='h5'>
-                        <Highlighter highlightClassName={classes.highlighted}
+                        <Highlighter
+                            highlightClassName={classes.highlighted}
                             searchWords={[...queryArray]}
                             autoEscape={true}
                             textToHighlight={title}>
                         </Highlighter>
                     </Typography>
-                    <Typography className={classes.description} gutterBottom variant='subtitle1' align='left' paragraph>
-                        <Highlighter highlightClassName={classes.highlighted}
+                    <Typography className={classes.cardDescription} gutterBottom variant='subtitle1' align='left' paragraph>
+                        <Highlighter
+                            highlightClassName={classes.highlighted}
                             searchWords={[...queryArray]}
                             autoEscape={true}
                             textToHighlight={description}>
